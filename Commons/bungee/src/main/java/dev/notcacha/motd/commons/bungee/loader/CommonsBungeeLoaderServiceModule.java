@@ -2,6 +2,7 @@ package dev.notcacha.motd.commons.bungee.loader;
 
 import dev.notcacha.motd.api.Service;
 import dev.notcacha.motd.commons.bungee.motd.loader.CommonsBungeeMotdLoaderService;
+import dev.notcacha.motd.commons.bungee.service.CommonsBungeeLoaderService;
 import me.yushust.inject.AbstractModule;
 
 public class CommonsBungeeLoaderServiceModule extends AbstractModule {
@@ -11,5 +12,7 @@ public class CommonsBungeeLoaderServiceModule extends AbstractModule {
         bind(Service.class).named("motd-loader-service").to(CommonsBungeeMotdLoaderService.class).singleton();
         bind(Service.class).named("command-loader-service").to(CommonsBungeeCommandLoaderService.class).singleton();
         bind(Service.class).named("listener-loader-service").to(CommonsBungeeEventLoaderService.class).singleton();
+
+        bind(Service.class).named("loader-service").to(CommonsBungeeLoaderService.class).singleton();
     }
 }
