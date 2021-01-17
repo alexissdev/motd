@@ -1,0 +1,15 @@
+# All messages from Motd Bungee Plugin!
+# This will be the message that will be sent when the sender does not have sufficient permissions to execute the action
+no-permissions: "&cYou no have permissions to execute this command!"
+# This will be the help message sent, when required
+help-message:
+  - ""
+# These will be all messages of errors or invalidity when executing actions
+invalid:
+  type: "&cThe type of motd you are trying to set does not exist!"
+  line: "&cThe line %s if not valid!"
+  set-line: "&cAn error occurred while trying to set line %s!"
+# Here are all the messages about established things, {"types", "lines"} etc
+set:
+  type: "&aYou have set the type of motd %s correctly!"
+  line: "&aThe line %s has been changed correctly!"

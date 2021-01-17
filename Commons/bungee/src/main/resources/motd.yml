@@ -1,0 +1,10 @@
+# Example
+motd:
+  normal:
+    first: "Follow me on Twitter @NCachax"
+    two: "My discord is Cassha#7138"
+    description: ""
+  whitelist:
+    first: ""
+    two: ""
+    description: ""

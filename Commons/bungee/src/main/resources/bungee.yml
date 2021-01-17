@@ -1,0 +1,5 @@
+name: MOTD
+version: 1.0.0
+main: dev.notcacha.motd.commons.bungee.CommonsBungee
+author: Cassha
+description: Simple MOTD System created by Cassha#7138
