@@ -11,9 +11,9 @@ public interface Motd extends SavableModel {
 
     void setFirstLine(String line);
 
-    String getTwoLine();
+    String getSecondLine();
 
-    void setTwoLine(String line);
+    void setSecondLine(String line);
 
     List<String> getDescription();
 
@@ -63,29 +63,40 @@ public interface Motd extends SavableModel {
 
     static Motd EMPTY(String motdId) {
         return new Motd() {
+
+            private String first = "The motd main line has not been established!";
+            private String second = "The secondary motd line has not been established!";
+            private List<String> description = Collections.singletonList("No list has been established!");
+
             @Override
             public String getFirstLine() {
-                return "The motd main line has not been established!";
+                return first;
             }
 
             @Override
-            public void setFirstLine(String line) {}
-
-            @Override
-            public String getTwoLine() {
-                return "The secondary motd line has not been established!";
+            public void setFirstLine(String line) {
+                this.first = line;
             }
 
             @Override
-            public void setTwoLine(String line) {}
+            public String getSecondLine() {
+                return second;
+            }
+
+            @Override
+            public void setSecondLine(String line) {
+                second = line;
+            }
 
             @Override
             public List<String> getDescription() {
-                return Collections.singletonList("No list has been established!");
+                return description;
             }
 
             @Override
-            public void setDescription(List<String> description) {}
+            public void setDescription(List<String> description) {
+                this.description = description;
+            }
 
             @Override
             public String getId() {

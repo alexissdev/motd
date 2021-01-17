@@ -27,7 +27,7 @@ public class CommonsBungeeMotdLineUpdaterProcessor implements MotdLineUpdaterPro
             }
 
             case 2: {
-                motd.setTwoLine(colorText);
+                motd.setSecondLine(colorText);
             }
         }
 

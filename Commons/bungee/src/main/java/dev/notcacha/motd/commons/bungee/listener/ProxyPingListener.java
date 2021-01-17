@@ -24,7 +24,7 @@ public class ProxyPingListener implements Listener {
         ping.setDescriptionComponent(
                 new TextComponent(
                         TextComponent.fromLegacyText(
-                                currentMotd.getFirstLine() + "\n" + currentMotd.getTwoLine()
+                                currentMotd.getFirstLine() + "\n" + currentMotd.getSecondLine()
                         )
                 )
         );

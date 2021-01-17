@@ -7,14 +7,14 @@ import java.util.List;
 public class CommonsBungeeMotd implements Motd {
 
     private final String id;
-    private final String firstLine;
-    private final String twoLine;
-    private final List<String> description;
+    private String firstLine;
+    private String secondLine;
+    private List<String> description;
 
-    public CommonsBungeeMotd(String id, String firstLine, String twoLine, List<String> description) {
+    public CommonsBungeeMotd(String id, String firstLine, String secondLine, List<String> description) {
         this.id = id;
         this.firstLine = firstLine;
-        this.twoLine = twoLine;
+        this.secondLine = secondLine;
         this.description = description;
     }
 
@@ -27,11 +27,26 @@ public class CommonsBungeeMotd implements Motd {
         return firstLine;
     }
 
-    public String getTwoLine() {
-        return twoLine;
+    @Override
+    public void setFirstLine(String line) {
+        this.firstLine = line;
+    }
+
+    public String getSecondLine() {
+        return secondLine;
+    }
+
+    @Override
+    public void setSecondLine(String line) {
+        this.secondLine = line;
     }
 
     public List<String> getDescription() {
         return description;
+    }
+
+    @Override
+    public void setDescription(List<String> description) {
+        this.description = description;
     }
 }

@@ -8,7 +8,7 @@ public interface MotdBuilder {
 
     MotdBuilder setFirstLine(String line);
 
-    MotdBuilder setTwoLine(String line);
+    MotdBuilder setSecondLine(String line);
 
     MotdBuilder addDescription(String... lines);
 

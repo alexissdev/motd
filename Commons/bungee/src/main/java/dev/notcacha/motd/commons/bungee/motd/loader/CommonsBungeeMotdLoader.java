@@ -24,7 +24,7 @@ public class CommonsBungeeMotdLoader implements MotdLoader {
                 .setFirstLine(configuration.getString(
                         String.format(MotdLoader.CONFIGURATION_KEY, motdId) + ".first"
                 ))
-                .setTwoLine(configuration.getString(
+                .setSecondLine(configuration.getString(
                         String.format(MotdLoader.CONFIGURATION_KEY, motdId) + ".two"
                 ))
                 .setDescription(configuration.getStringList(
