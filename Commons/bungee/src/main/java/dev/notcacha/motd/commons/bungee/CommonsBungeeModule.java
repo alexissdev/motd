@@ -1,5 +1,6 @@
 package dev.notcacha.motd.commons.bungee;
 
+import dev.notcacha.motd.commons.bungee.file.CommonsBungeeFileModule;
 import dev.notcacha.motd.commons.bungee.message.CommonsBungeeMessageModule;
 import dev.notcacha.motd.commons.bungee.motd.CommonsBungeeMotdModule;
 import dev.notcacha.motd.commons.bungee.service.CommonsBungeeServiceModule;
@@ -17,6 +18,8 @@ public class CommonsBungeeModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(Plugin.class).toInstance(plugin);
+
+        install(new CommonsBungeeFileModule(plugin));
 
         install(new CommonsBungeeMessageModule());
 
