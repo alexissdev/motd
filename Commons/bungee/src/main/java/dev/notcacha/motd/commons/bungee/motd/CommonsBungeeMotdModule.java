@@ -19,9 +19,10 @@ public class CommonsBungeeMotdModule extends AbstractModule {
     public void configure() {
         bind(MotdLoader.class).to(CommonsBungeeMotdLoader.class).singleton();
         bind(new TypeReference<CommonsBungeeObjectCache<Motd>>() {}).to(CommonsBungeeMotdObjectCache.class).singleton();
+
+        bind(MotdStatusUpdaterProcessor.class).to(CommonsBungeeMotdStatusUpdaterProcessor.class).singleton();
         bind(MotdMatcher.class).to(CommonsBungeeMotdMatcher.class).singleton();
 
         bind(MotdLineUpdaterProcessor.class).to(CommonsBungeeMotdLineUpdaterProcessor.class).singleton();
-        bind(MotdStatusUpdaterProcessor.class).to(CommonsBungeeMotdStatusUpdaterProcessor.class).singleton();
     }
 }

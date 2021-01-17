@@ -14,7 +14,7 @@ import net.md_5.bungee.api.plugin.Plugin;
 
 import javax.inject.Inject;
 
-public class CommandLoaderService implements Service {
+public class CommonsBungeeCommandLoaderService implements Service {
 
     @Inject
     private Plugin plugin;

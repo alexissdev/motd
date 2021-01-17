@@ -7,4 +7,6 @@ import java.util.Optional;
 public interface MotdMatcher {
 
     Motd getMotdById(String id);
+
+    Motd getCurrentMotd();
 }
